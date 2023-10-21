@@ -26,7 +26,7 @@ class GrediantContainer extends StatelessWidget {
       child: Container(
           width: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
