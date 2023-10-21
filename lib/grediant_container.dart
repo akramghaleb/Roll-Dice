@@ -14,8 +14,8 @@ class GrediantContainer extends StatelessWidget {
   final Color color1;
   final Color color2;
 
-  void onPressButton(String msg) {
-    log('The button is clicked! $msg');
+  void rollDiceBtn() {
+    log('The button is clicked! ');
   }
 
   @override
@@ -29,21 +29,24 @@ class GrediantContainer extends StatelessWidget {
           colors: [color1, color2],
         ),
       ),
-      child: Container(
-          width: double.infinity,
+      child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                'images/dice-1.png',
-                width: 100,
-              ),
-              TextButton(
-                onPressed: () => onPressButton('Hello'),
-                child: const Text('Click me !'),
-              ),
-              /* OutlinedButton.icon(
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset(
+            'images/dice-1.png',
+            width: 200,
+          ),
+          TextButton(
+            style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                textStyle: const TextStyle(fontSize: 28)),
+            onPressed: rollDiceBtn,
+            child: const Text('Roll Dice'),
+          ),
+          /* OutlinedButton.icon(
                 onPressed: () => log('clicked!'),
                 label: const Text('Click me !'),
                 icon: const Icon(Icons.apple),
@@ -53,8 +56,8 @@ class GrediantContainer extends StatelessWidget {
                 label: const Text('Click me !'),
                 icon: const Icon(Icons.apple),
               ), */
-            ],
-          )),
+        ],
+      )),
     );
   }
 }
