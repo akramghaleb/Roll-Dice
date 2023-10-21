@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
           //backgroundColor: Colors.black45,
-          body: GrediantContainer()),
+          body: GrediantContainer(Color.fromRGBO(255, 80, 2, 38),
+              Color.fromRGBO(255, 69, 15, 122))),
     );
   }
 }

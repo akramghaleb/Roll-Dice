@@ -7,23 +7,23 @@ const endAlignment = Alignment.bottomRight;
 // final getDate = getDate(); --> value change in run time; and can not in code
 // const beginAlignment = Alignment.topLeft; --> value can not be change in run time and in code
 class GrediantContainer extends StatelessWidget {
-  const GrediantContainer({super.key});
+  const GrediantContainer(this.color1, this.color2, {super.key});
+
+  final Color color1;
+  final Color color2;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       //color: Colors.amber,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: beginAlignment,
           end: endAlignment,
-          colors: [
-            Color.fromRGBO(218, 306, 237, 1),
-            Color.fromRGBO(90, 170, 245, 1)
-          ],
+          colors: [color1, color2],
         ),
       ),
-      child: const Center(child: MyCustomTextStyle()),
+      child: const Center(child: MyCustomTextStyle('Hello World!')),
     );
   }
 }
