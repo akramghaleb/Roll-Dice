@@ -23,7 +23,12 @@ class GrediantContainer extends StatelessWidget {
           colors: [color1, color2],
         ),
       ),
-      child: const Center(child: MyCustomTextStyle('Hello World!')),
+      child: Center(
+        child: Image.asset(
+          'images/dice-1.png',
+          width: 250,
+        ),
+      ),
     );
   }
 }
