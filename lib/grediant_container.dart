@@ -23,12 +23,26 @@ class GrediantContainer extends StatelessWidget {
           colors: [color1, color2],
         ),
       ),
-      child: Center(
-        child: Image.asset(
-          'images/dice-1.png',
-          width: 250,
-        ),
-      ),
+      child: Container(
+          width: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                'images/dice-1.png',
+                width: 100,
+              ),
+              Image.asset(
+                'images/dice-2.png',
+                width: 100,
+              ),
+              Image.asset(
+                'images/dice-3.png',
+                width: 100,
+              ),
+            ],
+          )),
     );
   }
 }
