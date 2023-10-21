@@ -14,6 +14,10 @@ class GrediantContainer extends StatelessWidget {
   final Color color1;
   final Color color2;
 
+  void onPressButton(String msg) {
+    log('The button is clicked! $msg');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,12 +39,11 @@ class GrediantContainer extends StatelessWidget {
                 'images/dice-1.png',
                 width: 100,
               ),
-              TextButton.icon(
-                onPressed: () => log('clicked!'),
-                label: const Text('Click me !'),
-                icon: const Icon(Icons.apple),
+              TextButton(
+                onPressed: () => onPressButton('Hello'),
+                child: const Text('Click me !'),
               ),
-              OutlinedButton.icon(
+              /* OutlinedButton.icon(
                 onPressed: () => log('clicked!'),
                 label: const Text('Click me !'),
                 icon: const Icon(Icons.apple),
@@ -49,7 +52,7 @@ class GrediantContainer extends StatelessWidget {
                 onPressed: () => log('clicked!'),
                 label: const Text('Click me !'),
                 icon: const Icon(Icons.apple),
-              ),
+              ), */
             ],
           )),
     );
