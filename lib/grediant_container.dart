@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:roll_dice/my_custom_text_style.dart';
 
@@ -33,13 +35,20 @@ class GrediantContainer extends StatelessWidget {
                 'images/dice-1.png',
                 width: 100,
               ),
-              Image.asset(
-                'images/dice-2.png',
-                width: 100,
+              TextButton.icon(
+                onPressed: () => log('clicked!'),
+                label: const Text('Click me !'),
+                icon: const Icon(Icons.apple),
               ),
-              Image.asset(
-                'images/dice-3.png',
-                width: 100,
+              OutlinedButton.icon(
+                onPressed: () => log('clicked!'),
+                label: const Text('Click me !'),
+                icon: const Icon(Icons.apple),
+              ),
+              ElevatedButton.icon(
+                onPressed: () => log('clicked!'),
+                label: const Text('Click me !'),
+                icon: const Icon(Icons.apple),
               ),
             ],
           )),
