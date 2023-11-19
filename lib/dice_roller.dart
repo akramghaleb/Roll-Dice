@@ -19,7 +19,7 @@ class _DiceRollerState extends State<DiceRoller> {
       choosenImage = random.nextInt(6) + 1;
     });
 
-    dev.log('The button is clicked! ');
+    // dev.log('The button is clicked! ');
   }
 
   @override
