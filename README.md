@@ -2,6 +2,7 @@
 
 A new Flutter project.
 
+| Screenshot | Screenshot | Screenshot |
 | --- | --- | ---|
 | ![image](scs/1.png) | ![image](scs/2.png) | ![image](scs/3.png) |
 | ![image](scs/4.png) | ![image](scs/5.png) | ![image](scs/6.png) |
